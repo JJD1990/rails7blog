@@ -1,3 +1,5 @@
-<strong><%= @article.title %></strong> 
-<%= @article.content %>
+<%= render 'article', article: @article %>
 <%= link_to 'home page', root_path %>
+<%= render 'comments/form' %>
+<h3>Comments</h3>
+<%= render 'comments/comment' %>

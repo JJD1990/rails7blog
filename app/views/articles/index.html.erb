@@ -1,9 +1,9 @@
 <h1>Index Page</h1>
 <ul>
 <% @articles.each do |article|%>
-<strong><%= article.title %></strong>
-<p><%= article.content %></p>
-<%= link_to "Show", article_path(article.id) %>
+<%= render 'article', article: article %>
+<%= link_to "Show", article %>
+<br>
 <% end %>
 </ul>
-<%= link_to "New artile", articles_new_path %>
+<%= link_to "New article", new_article_path %>
